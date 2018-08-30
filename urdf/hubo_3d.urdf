@@ -1,4 +1,4 @@
-l<!--
+<!--
   Copyright 2016 The Cartographer Authors
 
   Licensed under the Apache License, Version 2.0 (the "License");
@@ -24,7 +24,7 @@ l<!--
 
   <link name="imu_link">
     <visual>
-      <origin xyz="0.0 0.0 0.0" />
+      <origin xyz="0.0 0.0 0.92" />
       <geometry>
         <box size="0.06 0.04 0.02" />
       </geometry>
@@ -47,12 +47,13 @@ l<!--
   <joint name="imu_link_joint" type="fixed">
     <parent link="base_link" />
     <child link="imu_link" />
-    <origin xyz="0 0 0" rpy="3.1416 0 0" />
+    <!-- <origin xyz="0 0 0" rpy="3.1416 0 0" /> -->
+    <origin xyz="0 0 0" rpy="0 0 0" />
   </joint>
 
   <joint name="velodyne_joint" type="fixed">
     <parent link="base_link" />
     <child link="velodyne" />
-    <origin xyz="0. 0. 0.013" rpy="0. 0. 0." />
+    <origin xyz="0. 0. 0.99" rpy="0. 0. 0." />
   </joint>
 </robot>
