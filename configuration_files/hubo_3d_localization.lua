@@ -28,12 +28,12 @@ TRAJECTORY_BUILDER_3D.submaps.low_resolution = 0.15 --0.45
 TRAJECTORY_BUILDER_3D.num_accumulated_range_data = 1
 
 MAP_BUILDER.use_trajectory_builder_3d = true
-MAP_BUILDER.num_background_threads = 8
+MAP_BUILDER.num_background_threads = 7
 POSE_GRAPH.optimization_problem.huber_scale = 5e2
-POSE_GRAPH.optimize_every_n_nodes = 320 --100
+POSE_GRAPH.optimize_every_n_nodes =  4 --100
 POSE_GRAPH.constraint_builder.sampling_ratio = 0.1 --0.03
-POSE_GRAPH.optimization_problem.ceres_solver_options.max_num_iterations = 10
-POSE_GRAPH.constraint_builder.min_score = 0.4 --0.62
-POSE_GRAPH.constraint_builder.global_localization_min_score = 0.4 --0.66
+POSE_GRAPH.optimization_problem.ceres_solver_options.max_num_iterations = 4 --10
+POSE_GRAPH.constraint_builder.min_score = 0.62
+POSE_GRAPH.constraint_builder.global_localization_min_score = 0.66
 
 return options
